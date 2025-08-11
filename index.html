@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi Página Personal</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <nav>
+        <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+        <div class="menu-links" id="menu-links">
+            <a href="index.html">Inicio</a>
+            <a href="información personal.html">Información Personal</a>
+            <a href="Galería GIF.html">Galería GIF</a>
+            <a href="contacto.html">Contacto</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>Bienvenido a mi página personal</h1>
+    </header>
+
+    <div class="contenido">
+        <h2>Sobre mí</h2>
+        <p>Hola, soy Rufay Gutierrez, tengo 17 años y soy de Cúcuta. Actualmente soy estudiante de Tecnología en Análisis y Desarrollo de Software.</p>
+        <p>Me apasiona la programación y disfruto creando proyectos que resuelven problemas reales. En mi tiempo libre, me gusta explorar nuevas tecnologías y aprender sobre desarrollo web y móvil.</p>
+        <p>Esta es una breve introducción sobre mí. Si quieres saber más, no dudes en contactarme.</p>
+        <section style="text-align: center;">
+            <img src="imagen mia.jpg" alt="Rufay Gutierrez" style="width: 300px; height: 300px; object-fit:cover;">
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Rufay Gutierrez. Todos los derechos reservados.</p>
+        <div id="sfc2kcepha8p67z997pnfmp8rtpha6edm7r"></div>
+        <script type="text/javascript" src="https://counter1.optistats.ovh/private/counter.js?c=2kcepha8p67z997pnfmp8rtpha6edm7r&down=async" async></script>
+        <noscript>
+            <a href="https://www.contadorvisitasgratis.com" title="contador de visitas para web">
+                <img src="https://counter1.optistats.ovh/private/contadorvisitasgratis.php?c=2kcepha8p67z997pnfmp8rtpha6edm7r" border="0" title="contador de visitas para web" alt="contador de visitas para web">
+            </a>
+        </noscript>
+    </footer>
+
+    <script>
+        document.getElementById("menu-toggle").addEventListener("click", function() {
+            document.getElementById("menu-links").classList.toggle("active");
+        });
+    </script>
+</body>
+</html>

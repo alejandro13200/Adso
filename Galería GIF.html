@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería GIF</title>
+    <link rel="stylesheet" href="index.css">
+   
+</head>
+<body>
+    <nav>
+        <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+        <div class="menu-links" id="menu-links">
+            <a href="index.html">Inicio</a>
+            <a href="información personal.html">Información Personal</a>
+            <a href="Galería GIF.html">Galería GIF</a>
+            <a href="contacto.html">Contacto</a>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Galería GIF</h1>
+    </header>
+
+    <div class="contenido">
+        <section style="display: flex; flex-wrap: wrap; justify-content: center;">
+            <div class="gif-container">
+                <img src="oye gelda.jpg" alt="GIF 1" class="gif-img" id="img-oyegelda">
+                <audio id="audio-oyegelda" src="oye gelda.mp3"></audio>
+            </div>
+            <div class="gif-container">
+                <img src="Imagen 6.jpg" alt="GIF 2" class="gif-img" id="img-gif2">
+                <audio id="audio-gif2" src="Audio.mp3"></audio>
+            </div>
+             <div class="gif-container">
+                <img src="futbol.jpg" alt="GIF 6" class="gif-img" id="img-gif6">
+                <audio id="audio-gif6" src="futbol.mp3"></audio>
+            </div>
+            <div class="gif-container">
+                <img src="Sena.jpg" alt="GIF 3" class="gif-img" id="img-gif3">
+                <audio id="audio-gif3" src="ingles.mp3"></audio>
+            </div>
+            <div class="gif-container">
+                <img src="enamorado.jpg" alt="GIF 4" class="gif-img" id="img-gif4">
+                <audio id="audio-gif4" src="audio4.mp3"></audio> <!-- Cambia "audio4.mp3" por el audio que desees -->
+            </div>
+            <div class="gif-container">
+                <img src="diome.jpg" alt="GIF 5" class="gif-img" id="img-gif5">
+                <audio id="audio-gif5" src="audio5.mp3"></audio> <!-- Cambia "audio5.mp3" por el audio que desees -->
+            </div>
+           
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Rufay Gutierrez. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        const gifs = [
+            {img: 'img-oyegelda', audio: 'audio-oyegelda', dur: 43000},
+            {img: 'img-gif2', audio: 'audio-gif2', dur: 5000},
+            {img: 'img-gif3', audio: 'audio-gif3', dur: 7000},
+            {img: 'img-gif6', audio: 'audio-gif6', dur: 27000},
+            {img: 'img-gif4', audio: 'audio-gif4', dur: 5000},
+            {img: 'img-gif5', audio: 'audio-gif5', dur: 19000}
+            // Ajusta
+            // Agrega más si tienes más imágenes con audio
+        ];
+        gifs.forEach(g => {
+            const img = document.getElementById(g.img);
+            const audio = document.getElementById(g.audio);
+            let playing = false;
+            img.onclick = function() {
+                if (!playing) {
+                    img.classList.add('grande');
+                    audio.currentTime = 0;
+                    audio.play();
+                    playing = true;
+                    setTimeout(() => {
+                        img.classList.remove('grande');
+                        playing = false;
+                    }, g.dur);
+                } else {
+                    audio.pause();
+                    audio.currentTime = 0;
+                    img.classList.remove('grande');
+                    playing = false;
+                }
+            };
+        });
+    </script>
+    <script>
+        document.getElementById("menu-toggle").addEventListener("click", function() {
+            document.getElementById("menu-links").classList.toggle("active");
+        });
+    </script>
+</body>
+</html>
